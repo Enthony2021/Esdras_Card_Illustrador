@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'montserrat';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    background-image: url(https://scontent.fnat1-1.fna.fbcdn.net/v/t31.18172-8/13116389_574665949375727_190977037590945101_o.jpg?_nc_cat=104&ccb=1-5&_nc_sid=9267fe&_nc_eui2=AeGFbkJZnprR_E1In04yFkimLGvkXfJOuvYsa-Rd8k669svulwDOvJBm1K-JdUU7tgjk1ryA1lZCUtZHiD99ye51&_nc_ohc=49fpNha6KBQAX_V1Uck&_nc_ht=scontent.fnat1-1.fna&oh=00_AT-QwSf48BlfEugW-SAZdC8mbeL1gg00vON3dLlESQMqjw&oe=61FD4597);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.card {
+    width: 340px;
+    height: 480px;
+    cursor: pointer;
+}
+
+.back, .front {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: 0.6s linear;
+    background-color: black;
+}
+
+.front img {
+    width: 100%;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background-image: url(https://scontent.fnat1-1.fna.fbcdn.net/v/t1.6435-9/71282868_1296569197190216_7165730574882045952_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFQ3DfYjesNbqBjplRaSX90sJXcr_1dBsmwldyv_V0Gyb3sOw8gUinp9ai94dWpZqzCfCjOnKvkAxsJHrjH5WbJ&_nc_ohc=U1sqQTMgFrUAX-YpELq&_nc_ht=scontent.fnat1-1.fna&oh=00_AT9pBO_QBEzux-R2gyB-0AVCt6k97fDBEWrhpvZQpfYy6A&oe=61FBD58B);
+    background-repeat: no-repeat;
+    background-position: -80px;
+    background-size: cover;
+    background-color: #000000;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back_content {
+    color: #000000;
+    text-align: center;
+    width: 100%;
+}
+
+.icons img {
+    margin: 30px 10px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font-size: 18px;
+    transition: 0.4s ease-in-out;
+    
+}
+
+.icons img:hover {
+    background-color: #9ba0a5;
+    color: #fff;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+
